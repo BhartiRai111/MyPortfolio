@@ -64,9 +64,15 @@ const projects = [
     title: "PaperBiz ERP",
     description:
       "A full-featured Enterprise Resource Planning system for paper businesses. Handles inventory, billing, purchase orders, and financial reports end-to-end.",
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=450&fit=crop&auto=format",
+    image:
+      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=450&fit=crop&auto=format",
     tech: ["Java", "Spring Boot", "MySQL", "Thymeleaf", "Bootstrap"],
-    features: ["Inventory Management", "Invoice Generation", "Financial Reports", "Role-based Access"],
+    features: [
+      "Inventory Management",
+      "Invoice Generation",
+      "Financial Reports",
+      "Role-based Access",
+    ],
     github: "#",
     demo: "#",
     highlight: true,
@@ -75,9 +81,15 @@ const projects = [
     title: "Chat Application",
     description:
       "Real-time messaging platform with WebSocket support, user authentication, group chats, and message history persistence.",
-    image: "https://images.unsplash.com/photo-1611746872915-64382b5c76da?w=800&h=450&fit=crop&auto=format",
+    image:
+      "https://images.unsplash.com/photo-1611746872915-64382b5c76da?w=800&h=450&fit=crop&auto=format",
     tech: ["Java", "Spring Boot", "WebSocket", "MongoDB", "React"],
-    features: ["Real-time Messaging", "Group Chat", "JWT Auth", "Message History"],
+    features: [
+      "Real-time Messaging",
+      "Group Chat",
+      "JWT Auth",
+      "Message History",
+    ],
     github: "#",
     demo: "#",
     highlight: false,
@@ -86,9 +98,15 @@ const projects = [
     title: "Business Management System",
     description:
       "Comprehensive dashboard for small businesses to track leads, manage clients, monitor revenue, and schedule tasks.",
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=450&fit=crop&auto=format",
+    image:
+      "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=450&fit=crop&auto=format",
     tech: ["Spring Boot", "Spring Security", "JPA", "PostgreSQL", "Bootstrap"],
-    features: ["CRM Module", "Task Scheduler", "Revenue Analytics", "Client Portal"],
+    features: [
+      "CRM Module",
+      "Task Scheduler",
+      "Revenue Analytics",
+      "Client Portal",
+    ],
     github: "#",
     demo: "#",
     highlight: false,
@@ -97,28 +115,88 @@ const projects = [
     title: "Student Management System",
     description:
       "Academic platform managing enrollments, grades, attendance, fee collection, and performance analytics.",
-    image: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=800&h=450&fit=crop&auto=format",
+    image:
+      "https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=800&h=450&fit=crop&auto=format",
     tech: ["Java", "Spring MVC", "Hibernate", "MySQL", "Thymeleaf"],
-    features: ["Grade Management", "Attendance Tracking", "Fee Collection", "Report Cards"],
+    features: [
+      "Grade Management",
+      "Attendance Tracking",
+      "Fee Collection",
+      "Report Cards",
+    ],
     github: "#",
     demo: "#",
     highlight: false,
   },
 ];
 
+const downloadResume = () => {
+  const link = document.createElement("a");
+  link.href = "/Bharti_Rai_Resume.pdf"; // public folder me PDF ka naam
+  link.download = "Bharti_Rai_Resume.pdf";
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+};
+
 const services = [
-  { icon: <Server size={22} />, title: "Backend Development", desc: "Scalable Java Spring Boot microservices and monolithic applications built for production.", color: "#A855F7" },
-  { icon: <Globe size={22} />, title: "REST API Development", desc: "Well-documented, secure, and efficient RESTful APIs following industry best practices.", color: "#EC4899" },
-  { icon: <Database size={22} />, title: "Database Design", desc: "Normalized relational schemas, query optimization, and NoSQL data modeling.", color: "#34D399" },
-  { icon: <Zap size={22} />, title: "Bug Fixing", desc: "Systematic debugging, performance profiling, and root-cause resolution.", color: "#FBBF24" },
-  { icon: <Layers size={22} />, title: "Web Application Development", desc: "End-to-end full-stack web applications with clean architecture and responsive UI.", color: "#F472B6" },
+  {
+    icon: <Server size={22} />,
+    title: "Backend Development",
+    desc: "Scalable Java Spring Boot microservices and monolithic applications built for production.",
+    color: "#A855F7",
+  },
+  {
+    icon: <Globe size={22} />,
+    title: "REST API Development",
+    desc: "Well-documented, secure, and efficient RESTful APIs following industry best practices.",
+    color: "#EC4899",
+  },
+  {
+    icon: <Database size={22} />,
+    title: "Database Design",
+    desc: "Normalized relational schemas, query optimization, and NoSQL data modeling.",
+    color: "#34D399",
+  },
+  {
+    icon: <Zap size={22} />,
+    title: "Bug Fixing",
+    desc: "Systematic debugging, performance profiling, and root-cause resolution.",
+    color: "#FBBF24",
+  },
+  {
+    icon: <Layers size={22} />,
+    title: "Web Application Development",
+    desc: "End-to-end full-stack web applications with clean architecture and responsive UI.",
+    color: "#F472B6",
+  },
 ];
 
 const certifications = [
-  { title: "Java Full Stack Development", issuer: "Naresh i Technologies", year: "2023", icon: <Award size={20} /> },
-  { title: "Spring Boot Masterclass", issuer: "Udemy", year: "2023", icon: <Award size={20} /> },
-  { title: "SQL & Database Design", issuer: "HackerRank", year: "2022", icon: <Award size={20} /> },
-  { title: "Git & GitHub Essentials", issuer: "Coursera", year: "2022", icon: <Award size={20} /> },
+  {
+    title: "Java Full Stack Development",
+    issuer: "Naresh i Technologies",
+    year: "2023",
+    icon: <Award size={20} />,
+  },
+  {
+    title: "Spring Boot Masterclass",
+    issuer: "Udemy",
+    year: "2023",
+    icon: <Award size={20} />,
+  },
+  {
+    title: "SQL & Database Design",
+    issuer: "HackerRank",
+    year: "2022",
+    icon: <Award size={20} />,
+  },
+  {
+    title: "Git & GitHub Essentials",
+    issuer: "Coursera",
+    year: "2022",
+    icon: <Award size={20} />,
+  },
 ];
 
 /* ─── Hooks ─────────────────────────────────────────────────────────────── */
@@ -129,7 +207,12 @@ function useInView(threshold = 0.15) {
   useEffect(() => {
     const el = ref.current;
     if (!el) return;
-    const obs = new IntersectionObserver(([e]) => { if (e.isIntersecting) setInView(true); }, { threshold });
+    const obs = new IntersectionObserver(
+      ([e]) => {
+        if (e.isIntersecting) setInView(true);
+      },
+      { threshold },
+    );
     obs.observe(el);
     return () => obs.disconnect();
   }, [threshold]);
@@ -196,7 +279,9 @@ function GlassCard({
   return (
     <div
       className={`relative rounded-2xl border transition-all duration-300 ${
-        hover ? "hover:-translate-y-1 hover:shadow-[0_8px_40px_rgba(168,85,247,0.12)]" : ""
+        hover
+          ? "hover:-translate-y-1 hover:shadow-[0_8px_40px_rgba(168,85,247,0.12)]"
+          : ""
       } ${className}`}
       style={{
         background: "rgba(19,15,36,0.7)",
@@ -236,10 +321,24 @@ function FadeIn({
 
 /* ─── Sections ───────────────────────────────────────────────────────────── */
 
-function Nav({ active, scrollTo }: { active: string; scrollTo: (id: string) => void }) {
+function Nav({
+  active,
+  scrollTo,
+}: {
+  active: string;
+  scrollTo: (id: string) => void;
+}) {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
-  const links = ["About", "Skills", "Experience", "Projects", "Services", "Education", "Contact"];
+  const links = [
+    "About",
+    "Skills",
+    "Experience",
+    "Projects",
+    "Services",
+    "Education",
+    "Contact",
+  ];
 
   useEffect(() => {
     const fn = () => setScrolled(window.scrollY > 40);
@@ -299,7 +398,10 @@ function Nav({ active, scrollTo }: { active: string; scrollTo: (id: string) => v
             </button>
           </div>
 
-          <button className="md:hidden text-[#9488B0] hover:text-[#A855F7] transition-colors" onClick={() => setOpen(!open)}>
+          <button
+            className="md:hidden text-[#9488B0] hover:text-[#A855F7] transition-colors"
+            onClick={() => setOpen(!open)}
+          >
             {open ? <X size={22} /> : <Menu size={22} />}
           </button>
         </div>
@@ -308,12 +410,18 @@ function Nav({ active, scrollTo }: { active: string; scrollTo: (id: string) => v
       {open && (
         <div
           className="fixed inset-0 z-40 flex flex-col items-center justify-center gap-8"
-          style={{ background: "rgba(13,10,26,0.97)", backdropFilter: "blur(20px)" }}
+          style={{
+            background: "rgba(13,10,26,0.97)",
+            backdropFilter: "blur(20px)",
+          }}
         >
           {links.map((l) => (
             <button
               key={l}
-              onClick={() => { scrollTo(l.toLowerCase()); setOpen(false); }}
+              onClick={() => {
+                scrollTo(l.toLowerCase());
+                setOpen(false);
+              }}
               className="text-2xl font-semibold transition-colors"
               style={{ fontFamily: "Poppins, sans-serif", color: "#EDE8F5" }}
             >
@@ -335,7 +443,10 @@ function Hero({ scrollTo }: { scrollTo: (id: string) => void }) {
   ]);
 
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden" style={{ paddingTop: 80 }}>
+    <section
+      className="relative min-h-screen flex items-center overflow-hidden"
+      style={{ paddingTop: 80 }}
+    >
       {/* Animated blobs */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div
@@ -345,7 +456,8 @@ function Hero({ scrollTo }: { scrollTo: (id: string) => void }) {
             height: 600,
             top: "-20%",
             right: "-10%",
-            background: "radial-gradient(circle, rgba(168,85,247,0.08) 0%, transparent 70%)",
+            background:
+              "radial-gradient(circle, rgba(168,85,247,0.08) 0%, transparent 70%)",
             animation: "blob1 8s ease-in-out infinite",
           }}
         />
@@ -356,7 +468,8 @@ function Hero({ scrollTo }: { scrollTo: (id: string) => void }) {
             height: 500,
             bottom: "-10%",
             left: "-10%",
-            background: "radial-gradient(circle, rgba(236,72,153,0.07) 0%, transparent 70%)",
+            background:
+              "radial-gradient(circle, rgba(236,72,153,0.07) 0%, transparent 70%)",
             animation: "blob2 10s ease-in-out infinite",
           }}
         />
@@ -367,7 +480,8 @@ function Hero({ scrollTo }: { scrollTo: (id: string) => void }) {
             height: 300,
             top: "40%",
             left: "30%",
-            background: "radial-gradient(circle, rgba(6,182,212,0.05) 0%, transparent 70%)",
+            background:
+              "radial-gradient(circle, rgba(6,182,212,0.05) 0%, transparent 70%)",
             animation: "blob3 12s ease-in-out infinite",
           }}
         />
@@ -425,7 +539,8 @@ function Hero({ scrollTo }: { scrollTo: (id: string) => void }) {
               Hi, I&apos;m{" "}
               <span
                 style={{
-                  background: "linear-gradient(90deg, #A855F7 0%, #EC4899 100%)",
+                  background:
+                    "linear-gradient(90deg, #A855F7 0%, #EC4899 100%)",
                   WebkitBackgroundClip: "text",
                   WebkitTextFillColor: "transparent",
                 }}
@@ -446,11 +561,14 @@ function Hero({ scrollTo }: { scrollTo: (id: string) => void }) {
               className="text-base leading-relaxed mb-10 max-w-lg"
               style={{ fontFamily: "Inter, sans-serif", color: "#9488B0" }}
             >
-              Building scalable backend applications with Java, Spring Boot, REST APIs, SQL, and modern web technologies. Passionate about clean architecture and performance-first engineering.
+              Building scalable backend applications with Java, Spring Boot,
+              REST APIs, SQL, and modern web technologies. Passionate about
+              clean architecture and performance-first engineering.
             </p>
 
             <div className="flex flex-wrap gap-4">
               <button
+                onClick={downloadResume}
                 className="flex items-center gap-2 px-6 py-3 rounded-xl font-semibold text-sm transition-all hover:shadow-[0_0_30px_rgba(168,85,247,0.4)] hover:-translate-y-0.5"
                 style={{
                   background: "linear-gradient(135deg, #A855F7, #EC4899)",
@@ -488,7 +606,10 @@ function Hero({ scrollTo }: { scrollTo: (id: string) => void }) {
             </div>
 
             {/* Stats */}
-            <div className="grid grid-cols-3 gap-4 mt-12 pt-8 border-t" style={{ borderColor: "rgba(168,85,247,0.1)" }}>
+            <div
+              className="grid grid-cols-3 gap-4 mt-12 pt-8 border-t"
+              style={{ borderColor: "rgba(168,85,247,0.1)" }}
+            >
               {[
                 { val: "2+", label: "Years Experience" },
                 { val: "10+", label: "Projects Built" },
@@ -506,7 +627,13 @@ function Hero({ scrollTo }: { scrollTo: (id: string) => void }) {
                   >
                     {s.val}
                   </div>
-                  <div className="text-xs mt-0.5" style={{ color: "#9488B0", fontFamily: "Inter, sans-serif" }}>
+                  <div
+                    className="text-xs mt-0.5"
+                    style={{
+                      color: "#9488B0",
+                      fontFamily: "Inter, sans-serif",
+                    }}
+                  >
                     {s.label}
                   </div>
                 </div>
@@ -521,12 +648,16 @@ function Hero({ scrollTo }: { scrollTo: (id: string) => void }) {
               <div
                 className="absolute inset-0 rounded-full spin-slow"
                 style={{
-                  background: "conic-gradient(from 0deg, #A855F7, #EC4899, transparent, #A855F7)",
+                  background:
+                    "conic-gradient(from 0deg, #A855F7, #EC4899, transparent, #A855F7)",
                   padding: 2,
                   margin: -20,
                 }}
               >
-                <div className="w-full h-full rounded-full" style={{ background: "#0D0A1A" }} />
+                <div
+                  className="w-full h-full rounded-full"
+                  style={{ background: "#0D0A1A" }}
+                />
               </div>
 
               {/* Photo */}
@@ -534,7 +665,8 @@ function Hero({ scrollTo }: { scrollTo: (id: string) => void }) {
                 className="relative w-72 h-72 rounded-full overflow-hidden"
                 style={{
                   border: "3px solid rgba(168,85,247,0.3)",
-                  boxShadow: "0 0 60px rgba(168,85,247,0.2), inset 0 0 30px rgba(168,85,247,0.05)",
+                  boxShadow:
+                    "0 0 60px rgba(168,85,247,0.2), inset 0 0 30px rgba(168,85,247,0.05)",
                 }}
               >
                 <ImageWithFallback
@@ -544,15 +676,33 @@ function Hero({ scrollTo }: { scrollTo: (id: string) => void }) {
                 />
                 <div
                   className="absolute inset-0"
-                  style={{ background: "linear-gradient(to bottom, transparent 60%, rgba(13,10,26,0.4))" }}
+                  style={{
+                    background:
+                      "linear-gradient(to bottom, transparent 60%, rgba(13,10,26,0.4))",
+                  }}
                 />
               </div>
 
               {/* Floating tech badges */}
               {[
-                { label: "Spring Boot", color: "#6DB33F", top: "0%", right: "-20%" },
-                { label: "Java", color: "#A855F7", bottom: "10%", left: "-25%" },
-                { label: "REST API", color: "#EC4899", top: "40%", right: "-30%" },
+                {
+                  label: "Spring Boot",
+                  color: "#6DB33F",
+                  top: "0%",
+                  right: "-20%",
+                },
+                {
+                  label: "Java",
+                  color: "#A855F7",
+                  bottom: "10%",
+                  left: "-25%",
+                },
+                {
+                  label: "REST API",
+                  color: "#EC4899",
+                  top: "40%",
+                  right: "-30%",
+                },
               ].map((b) => (
                 <div
                   key={b.label}
@@ -585,13 +735,27 @@ function About() {
       period: "2022 – Present",
       duration: "2 Years",
       desc: "Developed and maintained Spring Boot microservices serving 50k+ users. Led REST API design for 3 client-facing products. Reduced query response time by 40% through Hibernate optimization.",
-      achievements: ["50k+ users served", "40% query optimization", "3 API products led"],
+      achievements: [
+        "50k+ users served",
+        "40% query optimization",
+        "3 API products led",
+      ],
     },
   ];
 
   const education = [
-    { degree: "B.Tech — Computer Science", institution: "RGPV University, Bhopal", year: "2019 – 2023", gpa: "7.8 CGPA" },
-    { degree: "Diploma — Computer Engineering", institution: "Govt. Polytechnic College", year: "2016 – 2019", gpa: "75%" },
+    {
+      degree: "B.Tech — Computer Science",
+      institution: "Apollo Institute of Technology, Kanpur",
+      year: "2023 – 2026",
+      gpa: "7.8 CGPA",
+    },
+    {
+      degree: "Diploma — Computer Engineering",
+      institution: "Govt. Polytechnic College, Varanasi",
+      year: "2020 – 2023",
+      gpa: "72%",
+    },
   ];
 
   return (
@@ -605,8 +769,13 @@ function About() {
           >
             Who I Am
           </h2>
-          <p className="text-base max-w-2xl mb-16" style={{ color: "#9488B0", fontFamily: "Inter, sans-serif" }}>
-            A passionate Java backend developer focused on building clean, maintainable, and scalable software. I take pride in writing production-grade code that solves real problems.
+          <p
+            className="text-base max-w-2xl mb-16"
+            style={{ color: "#9488B0", fontFamily: "Inter, sans-serif" }}
+          >
+            A passionate Java backend developer focused on building clean,
+            maintainable, and scalable software. I take pride in writing
+            production-grade code that solves real problems.
           </p>
         </FadeIn>
 
@@ -620,23 +789,39 @@ function About() {
               <Briefcase size={16} />
               Work Experience
             </div>
-            <div className="relative pl-6 border-l" style={{ borderColor: "rgba(168,85,247,0.2)" }}>
+            <div
+              className="relative pl-6 border-l"
+              style={{ borderColor: "rgba(168,85,247,0.2)" }}
+            >
               {experience.map((e, i) => (
                 <div key={i} className="relative mb-6 last:mb-0">
                   <div
                     className="absolute -left-[1.45rem] w-3 h-3 rounded-full border-2"
-                    style={{ background: "#A855F7", borderColor: "#0D0A1A", top: 4 }}
+                    style={{
+                      background: "#A855F7",
+                      borderColor: "#0D0A1A",
+                      top: 4,
+                    }}
                   />
                   <GlassCard className="p-6">
                     <div className="flex items-start justify-between gap-4 mb-3">
                       <div>
                         <h3
                           className="text-base font-semibold"
-                          style={{ color: "#EDE8F5", fontFamily: "Poppins, sans-serif" }}
+                          style={{
+                            color: "#EDE8F5",
+                            fontFamily: "Poppins, sans-serif",
+                          }}
                         >
                           {e.role}
                         </h3>
-                        <p className="text-sm mt-0.5" style={{ color: "#A855F7", fontFamily: "Inter, sans-serif" }}>
+                        <p
+                          className="text-sm mt-0.5"
+                          style={{
+                            color: "#A855F7",
+                            fontFamily: "Inter, sans-serif",
+                          }}
+                        >
                           {e.company}
                         </p>
                       </div>
@@ -651,7 +836,13 @@ function About() {
                         {e.duration}
                       </span>
                     </div>
-                    <p className="text-sm leading-relaxed mb-4" style={{ color: "#9488B0", fontFamily: "Inter, sans-serif" }}>
+                    <p
+                      className="text-sm leading-relaxed mb-4"
+                      style={{
+                        color: "#9488B0",
+                        fontFamily: "Inter, sans-serif",
+                      }}
+                    >
                       {e.desc}
                     </p>
                     <div className="flex flex-wrap gap-2">
@@ -685,18 +876,28 @@ function About() {
               <GraduationCap size={16} />
               Education
             </div>
-            <div className="relative pl-6 border-l" style={{ borderColor: "rgba(236,72,153,0.2)" }}>
+            <div
+              className="relative pl-6 border-l"
+              style={{ borderColor: "rgba(236,72,153,0.2)" }}
+            >
               {education.map((e, i) => (
                 <div key={i} className="relative mb-6 last:mb-0">
                   <div
                     className="absolute -left-[1.45rem] w-3 h-3 rounded-full border-2"
-                    style={{ background: "#EC4899", borderColor: "#0D0A1A", top: 4 }}
+                    style={{
+                      background: "#EC4899",
+                      borderColor: "#0D0A1A",
+                      top: 4,
+                    }}
                   />
                   <GlassCard className="p-6">
                     <div className="flex items-start justify-between gap-4 mb-2">
                       <h3
                         className="text-base font-semibold"
-                        style={{ color: "#EDE8F5", fontFamily: "Poppins, sans-serif" }}
+                        style={{
+                          color: "#EDE8F5",
+                          fontFamily: "Poppins, sans-serif",
+                        }}
                       >
                         {e.degree}
                       </h3>
@@ -711,8 +912,24 @@ function About() {
                         {e.gpa}
                       </span>
                     </div>
-                    <p className="text-sm" style={{ color: "#A855F7", fontFamily: "Inter, sans-serif" }}>{e.institution}</p>
-                    <p className="text-xs mt-1" style={{ color: "#9488B0", fontFamily: "Inter, sans-serif" }}>{e.year}</p>
+                    <p
+                      className="text-sm"
+                      style={{
+                        color: "#A855F7",
+                        fontFamily: "Inter, sans-serif",
+                      }}
+                    >
+                      {e.institution}
+                    </p>
+                    <p
+                      className="text-xs mt-1"
+                      style={{
+                        color: "#9488B0",
+                        fontFamily: "Inter, sans-serif",
+                      }}
+                    >
+                      {e.year}
+                    </p>
                   </GlassCard>
                 </div>
               ))}
@@ -727,14 +944,24 @@ function About() {
 function Skills() {
   const skillLevels: Record<string, Record<string, number>> = {
     Languages: { Java: 90, SQL: 82, JavaScript: 65 },
-    Frameworks: { "Spring Boot": 88, "Spring MVC": 82, "Spring Security": 75, Hibernate: 78, JPA: 76 },
+    Frameworks: {
+      "Spring Boot": 88,
+      "Spring MVC": 82,
+      "Spring Security": 75,
+      Hibernate: 78,
+      JPA: 76,
+    },
     Frontend: { HTML: 80, CSS: 72, Bootstrap: 75, Thymeleaf: 70 },
     Database: { MySQL: 84, PostgreSQL: 76, MongoDB: 68 },
     Tools: { Git: 85, GitHub: 85, "IntelliJ IDEA": 90, Maven: 80, Postman: 82 },
   };
 
   return (
-    <section id="skills" className="py-24 px-6" style={{ background: "rgba(19,15,36,0.3)" }}>
+    <section
+      id="skills"
+      className="py-24 px-6"
+      style={{ background: "rgba(19,15,36,0.3)" }}
+    >
       <div className="max-w-7xl mx-auto">
         <FadeIn>
           <SectionLabel label="Technical Skills" />
@@ -759,7 +986,10 @@ function Skills() {
                   </div>
                   <h3
                     className="font-semibold text-base"
-                    style={{ color: "#EDE8F5", fontFamily: "Poppins, sans-serif" }}
+                    style={{
+                      color: "#EDE8F5",
+                      fontFamily: "Poppins, sans-serif",
+                    }}
                   >
                     {cat}
                   </h3>
@@ -770,10 +1000,22 @@ function Skills() {
                     return (
                       <div key={skill}>
                         <div className="flex justify-between items-center mb-1">
-                          <span className="text-sm" style={{ color: "#D8CFEC", fontFamily: "Inter, sans-serif" }}>
+                          <span
+                            className="text-sm"
+                            style={{
+                              color: "#D8CFEC",
+                              fontFamily: "Inter, sans-serif",
+                            }}
+                          >
                             {skill}
                           </span>
-                          <span className="text-xs" style={{ color: data.color, fontFamily: "Inter, sans-serif" }}>
+                          <span
+                            className="text-xs"
+                            style={{
+                              color: data.color,
+                              fontFamily: "Inter, sans-serif",
+                            }}
+                          >
                             {level}%
                           </span>
                         </div>
@@ -830,22 +1072,35 @@ function Experience() {
               <div>
                 <div
                   className="w-14 h-14 rounded-2xl flex items-center justify-center mb-4"
-                  style={{ background: "rgba(168,85,247,0.12)", color: "#A855F7" }}
+                  style={{
+                    background: "rgba(168,85,247,0.12)",
+                    color: "#A855F7",
+                  }}
                 >
                   <Briefcase size={24} />
                 </div>
                 <h3
                   className="text-xl font-bold mb-1"
-                  style={{ color: "#EDE8F5", fontFamily: "Poppins, sans-serif" }}
+                  style={{
+                    color: "#EDE8F5",
+                    fontFamily: "Poppins, sans-serif",
+                  }}
                 >
                   Associate Software Developer
                 </h3>
-                <p className="text-sm mb-2" style={{ color: "#A855F7", fontFamily: "Inter, sans-serif" }}>
+                <p
+                  className="text-sm mb-2"
+                  style={{ color: "#A855F7", fontFamily: "Inter, sans-serif" }}
+                >
                   Tech Solutions Pvt. Ltd.
                 </p>
                 <span
                   className="inline-block text-xs px-3 py-1 rounded-full"
-                  style={{ background: "rgba(168,85,247,0.1)", color: "#A855F7", fontFamily: "Inter, sans-serif" }}
+                  style={{
+                    background: "rgba(168,85,247,0.1)",
+                    color: "#A855F7",
+                    fontFamily: "Inter, sans-serif",
+                  }}
                 >
                   Jul 2022 – Present · 2 Years
                 </span>
@@ -855,7 +1110,11 @@ function Experience() {
                 <div>
                   <h4
                     className="text-sm font-semibold mb-3"
-                    style={{ color: "#9488B0", fontFamily: "Inter, sans-serif", letterSpacing: "0.1em" }}
+                    style={{
+                      color: "#9488B0",
+                      fontFamily: "Inter, sans-serif",
+                      letterSpacing: "0.1em",
+                    }}
                   >
                     KEY RESPONSIBILITIES
                   </h4>
@@ -870,9 +1129,16 @@ function Experience() {
                       <li
                         key={item}
                         className="flex items-start gap-2 text-sm"
-                        style={{ color: "#D8CFEC", fontFamily: "Inter, sans-serif" }}
+                        style={{
+                          color: "#D8CFEC",
+                          fontFamily: "Inter, sans-serif",
+                        }}
                       >
-                        <ChevronRight size={14} className="mt-0.5 shrink-0" style={{ color: "#A855F7" }} />
+                        <ChevronRight
+                          size={14}
+                          className="mt-0.5 shrink-0"
+                          style={{ color: "#A855F7" }}
+                        />
                         {item}
                       </li>
                     ))}
@@ -882,29 +1148,65 @@ function Experience() {
                 <div>
                   <h4
                     className="text-sm font-semibold mb-3"
-                    style={{ color: "#9488B0", fontFamily: "Inter, sans-serif", letterSpacing: "0.1em" }}
+                    style={{
+                      color: "#9488B0",
+                      fontFamily: "Inter, sans-serif",
+                      letterSpacing: "0.1em",
+                    }}
                   >
                     ACHIEVEMENTS
                   </h4>
                   <div className="grid sm:grid-cols-3 gap-3">
                     {[
-                      { icon: <Zap size={16} />, val: "40%", label: "Query Speed Gain", color: "#FBBF24" },
-                      { icon: <Server size={16} />, val: "50k+", label: "Users Served", color: "#A855F7" },
-                      { icon: <Shield size={16} />, val: "3", label: "APIs Shipped", color: "#34D399" },
+                      {
+                        icon: <Zap size={16} />,
+                        val: "40%",
+                        label: "Query Speed Gain",
+                        color: "#FBBF24",
+                      },
+                      {
+                        icon: <Server size={16} />,
+                        val: "50k+",
+                        label: "Users Served",
+                        color: "#A855F7",
+                      },
+                      {
+                        icon: <Shield size={16} />,
+                        val: "3",
+                        label: "APIs Shipped",
+                        color: "#34D399",
+                      },
                     ].map((a) => (
                       <div
                         key={a.label}
                         className="p-4 rounded-xl text-center"
-                        style={{ background: `${a.color}0D`, border: `1px solid ${a.color}20` }}
+                        style={{
+                          background: `${a.color}0D`,
+                          border: `1px solid ${a.color}20`,
+                        }}
                       >
-                        <div className="flex justify-center mb-1" style={{ color: a.color }}>{a.icon}</div>
+                        <div
+                          className="flex justify-center mb-1"
+                          style={{ color: a.color }}
+                        >
+                          {a.icon}
+                        </div>
                         <div
                           className="text-xl font-bold"
-                          style={{ color: a.color, fontFamily: "Poppins, sans-serif" }}
+                          style={{
+                            color: a.color,
+                            fontFamily: "Poppins, sans-serif",
+                          }}
                         >
                           {a.val}
                         </div>
-                        <div className="text-xs mt-0.5" style={{ color: "#9488B0", fontFamily: "Inter, sans-serif" }}>
+                        <div
+                          className="text-xs mt-0.5"
+                          style={{
+                            color: "#9488B0",
+                            fontFamily: "Inter, sans-serif",
+                          }}
+                        >
                           {a.label}
                         </div>
                       </div>
@@ -924,7 +1226,11 @@ function Projects() {
   const [active, setActive] = useState(0);
 
   return (
-    <section id="projects" className="py-24 px-6" style={{ background: "rgba(19,15,36,0.3)" }}>
+    <section
+      id="projects"
+      className="py-24 px-6"
+      style={{ background: "rgba(19,15,36,0.3)" }}
+    >
       <div className="max-w-7xl mx-auto">
         <FadeIn>
           <SectionLabel label="Featured Projects" />
@@ -968,20 +1274,29 @@ function Projects() {
                   )}
                   <div
                     className="absolute inset-0"
-                    style={{ background: "linear-gradient(to top, rgba(13,10,26,0.8) 0%, transparent 60%)" }}
+                    style={{
+                      background:
+                        "linear-gradient(to top, rgba(13,10,26,0.8) 0%, transparent 60%)",
+                    }}
                   />
                 </div>
 
                 <div className="p-6">
                   <h3
                     className="text-lg font-bold mb-2"
-                    style={{ color: "#EDE8F5", fontFamily: "Poppins, sans-serif" }}
+                    style={{
+                      color: "#EDE8F5",
+                      fontFamily: "Poppins, sans-serif",
+                    }}
                   >
                     {p.title}
                   </h3>
                   <p
                     className="text-sm leading-relaxed mb-4"
-                    style={{ color: "#9488B0", fontFamily: "Inter, sans-serif" }}
+                    style={{
+                      color: "#9488B0",
+                      fontFamily: "Inter, sans-serif",
+                    }}
                   >
                     {p.description}
                   </p>
@@ -1008,7 +1323,10 @@ function Projects() {
                       <span
                         key={f}
                         className="flex items-center gap-1 text-xs"
-                        style={{ color: "#9488B0", fontFamily: "Inter, sans-serif" }}
+                        style={{
+                          color: "#9488B0",
+                          fontFamily: "Inter, sans-serif",
+                        }}
                       >
                         <ChevronRight size={12} style={{ color: "#34D399" }} />
                         {f}
@@ -1016,7 +1334,10 @@ function Projects() {
                     ))}
                   </div>
 
-                  <div className="flex gap-3 pt-4 border-t" style={{ borderColor: "rgba(168,85,247,0.1)" }}>
+                  <div
+                    className="flex gap-3 pt-4 border-t"
+                    style={{ borderColor: "rgba(168,85,247,0.1)" }}
+                  >
                     <a
                       href={p.github}
                       className="flex items-center gap-2 text-sm font-medium px-4 py-2 rounded-lg border transition-all hover:bg-[rgba(168,85,247,0.08)]"
@@ -1052,7 +1373,596 @@ function Projects() {
   );
 }
 
-function Services() {
+/* ─── Service Drawer ─────────────────────────────────────────────────────── */
+
+const drawerFeatures = [
+  { icon: <Server size={16} />, label: "Spring Boot Development" },
+  { icon: <Globe size={16} />, label: "REST API Development" },
+  { icon: <Shield size={16} />, label: "Authentication & JWT" },
+  { icon: <Database size={16} />, label: "Database Integration" },
+  { icon: <Zap size={16} />, label: "Performance Optimization" },
+  { icon: <Terminal size={16} />, label: "Deployment Support" },
+];
+
+const drawerTechs = [
+  "Java",
+  "Spring Boot",
+  "Hibernate",
+  "JPA",
+  "MySQL",
+  "PostgreSQL",
+  "MongoDB",
+  "Git",
+  "Docker",
+  "AWS",
+];
+
+const drawerProjects = [
+  {
+    title: "PaperBiz ERP",
+    desc: "Full-featured ERP system handling inventory, billing, and financial reports.",
+    image:
+      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=220&fit=crop&auto=format",
+  },
+  {
+    title: "Chat Application",
+    desc: "Real-time messaging with WebSocket, JWT auth, and MongoDB persistence.",
+    image:
+      "https://images.unsplash.com/photo-1611746872915-64382b5c76da?w=400&h=220&fit=crop&auto=format",
+  },
+];
+
+const processSteps = [
+  {
+    step: "01",
+    label: "Requirement Discussion",
+    desc: "Deep-dive into your goals, constraints, and tech stack.",
+  },
+  {
+    step: "02",
+    label: "Planning",
+    desc: "Architecture design, database schema, and API contract definition.",
+  },
+  {
+    step: "03",
+    label: "Development",
+    desc: "Iterative Spring Boot development with clean, tested code.",
+  },
+  {
+    step: "04",
+    label: "Testing",
+    desc: "Unit tests, integration tests, and API validation via Postman.",
+  },
+  {
+    step: "05",
+    label: "Deployment",
+    desc: "CI/CD pipeline setup, cloud deployment, and monitoring.",
+  },
+  {
+    step: "06",
+    label: "Support",
+    desc: "Post-launch bug fixes, performance tuning, and feature additions.",
+  },
+];
+
+const whyHireMe = [
+  {
+    icon: <Code2 size={16} />,
+    label: "Clean Code",
+    desc: "SOLID principles, DRY patterns",
+  },
+  {
+    icon: <Layers size={16} />,
+    label: "Scalable Architecture",
+    desc: "Built to grow with your business",
+  },
+  {
+    icon: <Zap size={16} />,
+    label: "On-Time Delivery",
+    desc: "Agile sprints, clear milestones",
+  },
+  {
+    icon: <Shield size={16} />,
+    label: "Long-Term Support",
+    desc: "Post-launch maintenance & updates",
+  },
+];
+
+type ServiceType = (typeof services)[number];
+
+function ServiceDrawer({
+  service,
+  onClose,
+  scrollTo,
+}: {
+  service: ServiceType | null;
+  onClose: () => void;
+  scrollTo: (id: string) => void;
+}) {
+  const [visible, setVisible] = useState(false);
+  const drawerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (service) {
+      requestAnimationFrame(() => setVisible(true));
+    } else {
+      setVisible(false);
+    }
+  }, [service]);
+
+  useEffect(() => {
+    const handler = (e: KeyboardEvent) => {
+      if (e.key === "Escape") onClose();
+    };
+    window.addEventListener("keydown", handler);
+    return () => window.removeEventListener("keydown", handler);
+  }, [onClose]);
+
+  useEffect(() => {
+    if (service) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [service]);
+
+  if (!service) return null;
+
+  return (
+    <>
+      {/* Backdrop */}
+      <div
+        className="fixed inset-0 z-50 transition-all duration-500"
+        style={{
+          background: visible ? "rgba(13,10,26,0.7)" : "rgba(13,10,26,0)",
+          backdropFilter: visible ? "blur(8px)" : "blur(0px)",
+        }}
+        onClick={onClose}
+      />
+
+      {/* Drawer panel */}
+      <div
+        ref={drawerRef}
+        className="fixed top-0 right-0 z-50 h-full overflow-y-auto transition-transform duration-500 ease-[cubic-bezier(0.32,0.72,0,1)]"
+        style={{
+          width: "min(500px, 100vw)",
+          background: "rgba(19,15,36,0.96)",
+          backdropFilter: "blur(24px)",
+          borderLeft: "1px solid rgba(168,85,247,0.2)",
+          boxShadow:
+            "-8px 0 80px rgba(168,85,247,0.18), -2px 0 20px rgba(236,72,153,0.08)",
+          transform: visible ? "translateX(0)" : "translateX(100%)",
+        }}
+        onClick={(e) => e.stopPropagation()}
+      >
+        {/* Glow strip top */}
+        <div
+          className="sticky top-0 left-0 right-0 h-px z-10"
+          style={{
+            background:
+              "linear-gradient(90deg, transparent, #A855F7, #EC4899, transparent)",
+          }}
+        />
+
+        <div className="p-6 md:p-8 pb-12">
+          {/* ── Header ── */}
+          <div className="flex items-start justify-between mb-6">
+            <div className="flex items-center gap-4">
+              <div
+                className="w-16 h-16 rounded-2xl flex items-center justify-center shrink-0"
+                style={{
+                  background: `linear-gradient(135deg, ${service.color}22, ${service.color}0a)`,
+                  border: `1px solid ${service.color}40`,
+                  color: service.color,
+                }}
+              >
+                <span style={{ transform: "scale(1.4)", display: "flex" }}>
+                  {service.icon}
+                </span>
+              </div>
+              <div>
+                <h2
+                  className="text-xl font-bold leading-tight"
+                  style={{
+                    color: "#EDE8F5",
+                    fontFamily: "Poppins, sans-serif",
+                  }}
+                >
+                  {service.title}
+                </h2>
+                <span
+                  className="inline-block mt-1.5 text-xs font-semibold px-3 py-1 rounded-full"
+                  style={{
+                    background: `${service.color}15`,
+                    color: service.color,
+                    border: `1px solid ${service.color}30`,
+                    fontFamily: "Inter, sans-serif",
+                  }}
+                >
+                  Java Backend
+                </span>
+              </div>
+            </div>
+            <button
+              onClick={onClose}
+              className="w-9 h-9 rounded-xl flex items-center justify-center transition-all hover:scale-110 shrink-0"
+              style={{
+                background: "rgba(168,85,247,0.1)",
+                border: "1px solid rgba(168,85,247,0.2)",
+                color: "#9488B0",
+              }}
+              aria-label="Close drawer"
+            >
+              <X size={16} />
+            </button>
+          </div>
+
+          {/* ── Description ── */}
+          <p
+            className="text-sm leading-relaxed mb-8 pb-8 border-b"
+            style={{
+              color: "#9488B0",
+              fontFamily: "Inter, sans-serif",
+              borderColor: "rgba(168,85,247,0.1)",
+            }}
+          >
+            {service.desc} I bring 2+ years of hands-on Spring Boot experience
+            to every engagement — writing production-grade code that scales with
+            your business and stands up to real-world load.
+          </p>
+
+          {/* ── What I Can Do ── */}
+          <div className="mb-8">
+            <h3
+              className="text-sm font-semibold tracking-widest uppercase mb-4"
+              style={{ color: "#A855F7", fontFamily: "Inter, sans-serif" }}
+            >
+              What I Can Do
+            </h3>
+            <div className="grid grid-cols-2 gap-3">
+              {drawerFeatures.map((f) => (
+                <div
+                  key={f.label}
+                  className="flex items-center gap-3 p-3 rounded-xl transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_4px_20px_rgba(168,85,247,0.12)] cursor-default"
+                  style={{
+                    background: "rgba(168,85,247,0.06)",
+                    border: "1px solid rgba(168,85,247,0.12)",
+                  }}
+                >
+                  <div
+                    className="w-7 h-7 rounded-lg flex items-center justify-center shrink-0"
+                    style={{
+                      background: "rgba(168,85,247,0.15)",
+                      color: "#A855F7",
+                    }}
+                  >
+                    {f.icon}
+                  </div>
+                  <span
+                    className="text-xs font-medium leading-tight"
+                    style={{
+                      color: "#D8CFEC",
+                      fontFamily: "Inter, sans-serif",
+                    }}
+                  >
+                    {f.label}
+                  </span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* ── Technologies ── */}
+          <div
+            className="mb-8 pb-8 border-b"
+            style={{ borderColor: "rgba(168,85,247,0.1)" }}
+          >
+            <h3
+              className="text-sm font-semibold tracking-widest uppercase mb-4"
+              style={{ color: "#A855F7", fontFamily: "Inter, sans-serif" }}
+            >
+              Technologies
+            </h3>
+            <div className="flex flex-wrap gap-2">
+              {drawerTechs.map((t, i) => {
+                const colors = [
+                  "#A855F7",
+                  "#EC4899",
+                  "#C084FC",
+                  "#A855F7",
+                  "#34D399",
+                  "#34D399",
+                  "#FBBF24",
+                  "#9488B0",
+                  "#EC4899",
+                  "#A855F7",
+                ];
+                const c = colors[i % colors.length];
+                return (
+                  <span
+                    key={t}
+                    className="text-xs font-medium px-3 py-1.5 rounded-full transition-all hover:-translate-y-0.5 cursor-default"
+                    style={{
+                      background: `${c}12`,
+                      border: `1px solid ${c}30`,
+                      color: c,
+                      fontFamily: "Inter, sans-serif",
+                    }}
+                  >
+                    {t}
+                  </span>
+                );
+              })}
+            </div>
+          </div>
+
+          {/* ── Related Projects ── */}
+          <div className="mb-8">
+            <h3
+              className="text-sm font-semibold tracking-widest uppercase mb-4"
+              style={{ color: "#A855F7", fontFamily: "Inter, sans-serif" }}
+            >
+              Related Projects
+            </h3>
+            <div className="space-y-4">
+              {drawerProjects.map((p) => (
+                <div
+                  key={p.title}
+                  className="rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_8px_32px_rgba(168,85,247,0.15)] group cursor-pointer"
+                  style={{
+                    background: "rgba(28,20,51,0.6)",
+                    border: "1px solid rgba(168,85,247,0.12)",
+                  }}
+                >
+                  <div className="relative h-32 overflow-hidden bg-[#1C1433]">
+                    <img
+                      src={p.image}
+                      alt={p.title}
+                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                      style={{ filter: "brightness(0.65) saturate(0.8)" }}
+                    />
+                    <div
+                      className="absolute inset-0"
+                      style={{
+                        background:
+                          "linear-gradient(to top, rgba(19,15,36,0.9) 0%, transparent 60%)",
+                      }}
+                    />
+                  </div>
+                  <div className="p-4 flex items-end justify-between">
+                    <div>
+                      <h4
+                        className="text-sm font-semibold mb-0.5"
+                        style={{
+                          color: "#EDE8F5",
+                          fontFamily: "Poppins, sans-serif",
+                        }}
+                      >
+                        {p.title}
+                      </h4>
+                      <p
+                        className="text-xs leading-relaxed"
+                        style={{
+                          color: "#9488B0",
+                          fontFamily: "Inter, sans-serif",
+                        }}
+                      >
+                        {p.desc}
+                      </p>
+                    </div>
+                    <button
+                      className="flex items-center gap-1.5 text-xs font-semibold px-3 py-1.5 rounded-lg ml-3 shrink-0 transition-all hover:shadow-[0_0_14px_rgba(168,85,247,0.35)]"
+                      style={{
+                        background: "linear-gradient(135deg, #A855F7, #EC4899)",
+                        color: "#fff",
+                        fontFamily: "Inter, sans-serif",
+                      }}
+                    >
+                      <ExternalLink size={11} />
+                      View
+                    </button>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* ── Development Process ── */}
+          <div
+            className="mb-8 pb-8 border-b"
+            style={{ borderColor: "rgba(168,85,247,0.1)" }}
+          >
+            <h3
+              className="text-sm font-semibold tracking-widest uppercase mb-6"
+              style={{ color: "#A855F7", fontFamily: "Inter, sans-serif" }}
+            >
+              Development Process
+            </h3>
+            <div
+              className="relative pl-6 border-l"
+              style={{ borderColor: "rgba(168,85,247,0.2)" }}
+            >
+              {processSteps.map((s, i) => (
+                <div
+                  key={s.step}
+                  className={`relative ${i < processSteps.length - 1 ? "mb-6" : ""}`}
+                >
+                  <div
+                    className="absolute -left-[1.35rem] w-2.5 h-2.5 rounded-full"
+                    style={{
+                      background:
+                        i === 0
+                          ? "linear-gradient(135deg, #A855F7, #EC4899)"
+                          : "rgba(168,85,247,0.3)",
+                      border:
+                        i === 0 ? "none" : "1px solid rgba(168,85,247,0.4)",
+                      top: 4,
+                    }}
+                  />
+                  <div className="flex items-baseline gap-2 mb-0.5">
+                    <span
+                      className="text-xs font-mono"
+                      style={{
+                        color: "#A855F7",
+                        fontFamily: "Inter, sans-serif",
+                      }}
+                    >
+                      {s.step}
+                    </span>
+                    <span
+                      className="text-sm font-semibold"
+                      style={{
+                        color: "#EDE8F5",
+                        fontFamily: "Poppins, sans-serif",
+                      }}
+                    >
+                      {s.label}
+                    </span>
+                  </div>
+                  <p
+                    className="text-xs leading-relaxed"
+                    style={{
+                      color: "#9488B0",
+                      fontFamily: "Inter, sans-serif",
+                    }}
+                  >
+                    {s.desc}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* ── Why Hire Me ── */}
+          <div className="mb-8">
+            <h3
+              className="text-sm font-semibold tracking-widest uppercase mb-4"
+              style={{ color: "#A855F7", fontFamily: "Inter, sans-serif" }}
+            >
+              Why Hire Me
+            </h3>
+            <div className="grid grid-cols-2 gap-3">
+              {whyHireMe.map((w) => (
+                <div
+                  key={w.label}
+                  className="p-4 rounded-xl transition-all duration-200 hover:-translate-y-0.5 cursor-default"
+                  style={{
+                    background: "rgba(168,85,247,0.06)",
+                    border: "1px solid rgba(168,85,247,0.12)",
+                  }}
+                >
+                  <div className="flex items-center gap-2 mb-1.5">
+                    <div
+                      className="w-6 h-6 rounded-lg flex items-center justify-center shrink-0"
+                      style={{
+                        background: "rgba(168,85,247,0.2)",
+                        color: "#A855F7",
+                      }}
+                    >
+                      {w.icon}
+                    </div>
+                    <span
+                      className="text-xs font-semibold"
+                      style={{
+                        color: "#EDE8F5",
+                        fontFamily: "Poppins, sans-serif",
+                      }}
+                    >
+                      {w.label}
+                    </span>
+                  </div>
+                  <p
+                    className="text-xs"
+                    style={{
+                      color: "#9488B0",
+                      fontFamily: "Inter, sans-serif",
+                    }}
+                  >
+                    {w.desc}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* ── CTA ── */}
+          <div
+            className="rounded-2xl p-6 text-center"
+            style={{
+              background:
+                "linear-gradient(135deg, rgba(168,85,247,0.15) 0%, rgba(236,72,153,0.1) 100%)",
+              border: "1px solid rgba(168,85,247,0.25)",
+              boxShadow: "0 0 40px rgba(168,85,247,0.1) inset",
+            }}
+          >
+            <div
+              className="w-12 h-12 rounded-2xl flex items-center justify-center mx-auto mb-3"
+              style={{
+                background: "linear-gradient(135deg, #A855F7, #EC4899)",
+                color: "#fff",
+              }}
+            >
+              <Zap size={22} />
+            </div>
+            <h3
+              className="text-lg font-bold mb-1"
+              style={{ color: "#EDE8F5", fontFamily: "Poppins, sans-serif" }}
+            >
+              Ready to build your project?
+            </h3>
+            <p
+              className="text-xs mb-5"
+              style={{ color: "#9488B0", fontFamily: "Inter, sans-serif" }}
+            >
+              Let&apos;s turn your idea into a production-ready application.
+            </p>
+            <div className="flex gap-3 justify-center">
+              <button
+                onClick={() => {
+                  onClose();
+                  scrollTo("contact");
+                }}
+                className="flex items-center gap-2 px-5 py-2.5 rounded-xl text-sm font-semibold transition-all hover:shadow-[0_0_24px_rgba(168,85,247,0.5)] hover:-translate-y-0.5"
+                style={{
+                  background: "linear-gradient(135deg, #A855F7, #EC4899)",
+                  color: "#fff",
+                  fontFamily: "Inter, sans-serif",
+                }}
+              >
+                <Mail size={14} />
+                Hire Me
+              </button>
+              <button
+                onClick={() => {
+                  onClose();
+                  scrollTo("contact");
+                }}
+                className="flex items-center gap-2 px-5 py-2.5 rounded-xl text-sm font-semibold border transition-all hover:bg-[rgba(168,85,247,0.1)] hover:-translate-y-0.5"
+                style={{
+                  borderColor: "rgba(168,85,247,0.3)",
+                  color: "#A855F7",
+                  fontFamily: "Inter, sans-serif",
+                }}
+              >
+                <Phone size={14} />
+                Contact Me
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+}
+
+function Services({
+  onServiceClick,
+}: {
+  onServiceClick: (s: ServiceType) => void;
+}) {
   return (
     <section id="services" className="py-24 px-6">
       <div className="max-w-7xl mx-auto">
@@ -1068,7 +1978,7 @@ function Services() {
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {services.map((s, i) => (
             <FadeIn key={s.title} delay={i * 70}>
-              <GlassCard className="p-6 group">
+              <GlassCard className="p-6 group cursor-pointer" hover={true}>
                 <div
                   className="w-12 h-12 rounded-xl flex items-center justify-center mb-4 transition-all duration-300 group-hover:scale-110"
                   style={{ background: `${s.color}15`, color: s.color }}
@@ -1077,20 +1987,30 @@ function Services() {
                 </div>
                 <h3
                   className="font-semibold mb-2"
-                  style={{ color: "#EDE8F5", fontFamily: "Poppins, sans-serif" }}
+                  style={{
+                    color: "#EDE8F5",
+                    fontFamily: "Poppins, sans-serif",
+                  }}
                 >
                   {s.title}
                 </h3>
-                <p className="text-sm leading-relaxed" style={{ color: "#9488B0", fontFamily: "Inter, sans-serif" }}>
+                <p
+                  className="text-sm leading-relaxed"
+                  style={{ color: "#9488B0", fontFamily: "Inter, sans-serif" }}
+                >
                   {s.desc}
                 </p>
-                <div
-                  className="flex items-center gap-1 mt-4 text-xs font-medium transition-colors"
+                <button
+                  onClick={() => onServiceClick(s)}
+                  className="flex items-center gap-1 mt-4 text-xs font-medium transition-all group-hover:gap-2"
                   style={{ color: s.color, fontFamily: "Inter, sans-serif" }}
                 >
                   Learn more
-                  <ArrowRight size={12} className="group-hover:translate-x-1 transition-transform" />
-                </div>
+                  <ArrowRight
+                    size={12}
+                    className="transition-transform group-hover:translate-x-1"
+                  />
+                </button>
               </GlassCard>
             </FadeIn>
           ))}
@@ -1104,26 +2024,40 @@ function Education() {
   const items = [
     {
       degree: "B.Tech — Computer Science & Engineering",
-      institution: "RGPV University, Bhopal",
-      year: "2019 – 2023",
+      institution: "Apollo Institute of Technology, Kanpur",
+      year: "2023 – 2026",
       gpa: "7.8 CGPA",
       icon: <GraduationCap size={20} />,
       color: "#EC4899",
-      highlights: ["Data Structures & Algorithms", "Database Management", "Software Engineering", "Operating Systems"],
+      highlights: [
+        "Data Structures & Algorithms",
+        "Database Management",
+        "Software Engineering",
+        "Operating Systems",
+      ],
     },
     {
       degree: "Diploma — Computer Engineering",
-      institution: "Govt. Polytechnic College, MP",
-      year: "2016 – 2019",
+      institution: "Govt. Polytechnic College, U.P.",
+      year: "2020 – 2023",
       gpa: "75%",
       icon: <Terminal size={20} />,
       color: "#34D399",
-      highlights: ["Programming Fundamentals", "Networking Basics", "Web Technologies", "Electronics"],
+      highlights: [
+        "Programming Fundamentals",
+        "Networking Basics",
+        "Web Technologies",
+        "Electronics",
+      ],
     },
   ];
 
   return (
-    <section id="education" className="py-24 px-6" style={{ background: "rgba(19,15,36,0.3)" }}>
+    <section
+      id="education"
+      className="py-24 px-6"
+      style={{ background: "rgba(19,15,36,0.3)" }}
+    >
       <div className="max-w-7xl mx-auto">
         <FadeIn>
           <SectionLabel label="Education" />
@@ -1149,7 +2083,10 @@ function Education() {
                     <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-2">
                       <h3
                         className="text-lg font-bold"
-                        style={{ color: "#EDE8F5", fontFamily: "Poppins, sans-serif" }}
+                        style={{
+                          color: "#EDE8F5",
+                          fontFamily: "Poppins, sans-serif",
+                        }}
                       >
                         {e.degree}
                       </h3>
@@ -1164,10 +2101,22 @@ function Education() {
                         {e.gpa}
                       </span>
                     </div>
-                    <p className="text-sm mb-1" style={{ color: e.color, fontFamily: "Inter, sans-serif" }}>
+                    <p
+                      className="text-sm mb-1"
+                      style={{
+                        color: e.color,
+                        fontFamily: "Inter, sans-serif",
+                      }}
+                    >
                       {e.institution}
                     </p>
-                    <p className="text-xs mb-4" style={{ color: "#9488B0", fontFamily: "Inter, sans-serif" }}>
+                    <p
+                      className="text-xs mb-4"
+                      style={{
+                        color: "#9488B0",
+                        fontFamily: "Inter, sans-serif",
+                      }}
+                    >
                       {e.year}
                     </p>
                     <div className="flex flex-wrap gap-2">
@@ -1216,20 +2165,32 @@ function Certifications() {
               <GlassCard className="p-6">
                 <div
                   className="w-10 h-10 rounded-xl flex items-center justify-center mb-4"
-                  style={{ background: "rgba(251,191,36,0.12)", color: "#FBBF24" }}
+                  style={{
+                    background: "rgba(251,191,36,0.12)",
+                    color: "#FBBF24",
+                  }}
                 >
                   {c.icon}
                 </div>
                 <h3
                   className="text-sm font-semibold mb-1.5 leading-snug"
-                  style={{ color: "#EDE8F5", fontFamily: "Poppins, sans-serif" }}
+                  style={{
+                    color: "#EDE8F5",
+                    fontFamily: "Poppins, sans-serif",
+                  }}
                 >
                   {c.title}
                 </h3>
-                <p className="text-xs mb-1" style={{ color: "#A855F7", fontFamily: "Inter, sans-serif" }}>
+                <p
+                  className="text-xs mb-1"
+                  style={{ color: "#A855F7", fontFamily: "Inter, sans-serif" }}
+                >
                   {c.issuer}
                 </p>
-                <p className="text-xs" style={{ color: "#9488B0", fontFamily: "Inter, sans-serif" }}>
+                <p
+                  className="text-xs"
+                  style={{ color: "#9488B0", fontFamily: "Inter, sans-serif" }}
+                >
                   {c.year}
                 </p>
               </GlassCard>
@@ -1243,15 +2204,49 @@ function Certifications() {
 
 function Contact() {
   const contacts = [
-    { icon: <Mail size={20} />, label: "Email", value: "bharti.rai@email.com", color: "#A855F7", href: "mailto:bharti.rai@email.com" },
-    { icon: <Phone size={20} />, label: "Phone", value: "+91 98765 43210", color: "#34D399", href: "tel:+919876543210" },
-    { icon: <Linkedin size={20} />, label: "LinkedIn", value: "linkedin.com/in/bhartirai", color: "#EC4899", href: "#" },
-    { icon: <Github size={20} />, label: "GitHub", value: "github.com/bhartirai", color: "#FBBF24", href: "#" },
-    { icon: <MapPin size={20} />, label: "Location", value: "Bhopal, Madhya Pradesh, India", color: "#F472B6", href: "#" },
+    {
+      icon: <Mail size={20} />,
+      label: "Email",
+      value: "bhartiraivns235@email.com",
+      color: "#A855F7",
+      href: "mailto:bhartiraivns235@email.com",
+    },
+    {
+      icon: <Phone size={20} />,
+      label: "Phone",
+      value: "+91 6388724377",
+      color: "#34D399",
+      href: "tel:+916388724377",
+    },
+    {
+      icon: <Linkedin size={20} />,
+      label: "LinkedIn",
+      value: "linkedin.com/in/er-bharti-rai-b58454227",
+      color: "#EC4899",
+      href: "https://www.linkedin.com/in/er-bharti-rai-b58454227",
+    },
+    {
+      icon: <Github size={20} />,
+      label: "GitHub",
+      value: "github.com/BhartiRai111",
+      color: "#FBBF24",
+      href: "https://github.com/BhartiRai111",
+    },
+    {
+      icon: <MapPin size={20} />,
+      label: "Location",
+      value: "Kanpur, Uttar Pradesh, India",
+      color: "#F472B6",
+      href: null,
+    },
   ];
 
   return (
-    <section id="contact" className="py-24 px-6" style={{ background: "rgba(19,15,36,0.3)" }}>
+    <section
+      id="contact"
+      className="py-24 px-6"
+      style={{ background: "rgba(19,15,36,0.3)" }}
+    >
       <div className="max-w-7xl mx-auto">
         <FadeIn>
           <SectionLabel label="Contact" />
@@ -1261,8 +2256,12 @@ function Contact() {
           >
             Get In Touch
           </h2>
-          <p className="text-base mb-16 max-w-lg" style={{ color: "#9488B0", fontFamily: "Inter, sans-serif" }}>
-            I&apos;m currently open to new opportunities. Whether you have a project in mind or just want to connect — my inbox is always open.
+          <p
+            className="text-base mb-16 max-w-lg"
+            style={{ color: "#9488B0", fontFamily: "Inter, sans-serif" }}
+          >
+            I&apos;m currently open to new opportunities. Whether you have a
+            project in mind or just want to connect — my inbox is always open.
           </p>
         </FadeIn>
 
@@ -1271,7 +2270,16 @@ function Contact() {
             {contacts.map((c, i) => (
               <FadeIn key={c.label} delay={i * 60}>
                 <a
-                  href={c.href}
+                  href={c.href || "#"}
+                  target={
+                    c.label === "GitHub" || c.label === "LinkedIn"
+                      ? "_blank"
+                      : "_self"
+                  }
+                  rel="noopener noreferrer"
+                  onClick={(e) => {
+                    if (!c.href) e.preventDefault();
+                  }}
                   className="flex items-center gap-4 p-4 rounded-xl border transition-all hover:-translate-y-0.5 group"
                   style={{
                     background: "rgba(19,15,36,0.6)",
@@ -1286,10 +2294,22 @@ function Contact() {
                     {c.icon}
                   </div>
                   <div>
-                    <div className="text-xs mb-0.5" style={{ color: "#9488B0", fontFamily: "Inter, sans-serif" }}>
+                    <div
+                      className="text-xs mb-0.5"
+                      style={{
+                        color: "#9488B0",
+                        fontFamily: "Inter, sans-serif",
+                      }}
+                    >
                       {c.label}
                     </div>
-                    <div className="text-sm font-medium" style={{ color: "#EDE8F5", fontFamily: "Inter, sans-serif" }}>
+                    <div
+                      className="text-sm font-medium"
+                      style={{
+                        color: "#EDE8F5",
+                        fontFamily: "Inter, sans-serif",
+                      }}
+                    >
                       {c.value}
                     </div>
                   </div>
@@ -1313,15 +2333,33 @@ function Contact() {
               </h3>
               <div className="space-y-4">
                 {[
-                  { id: "name", label: "Your Name", type: "text", placeholder: "John Doe" },
-                  { id: "email", label: "Email Address", type: "email", placeholder: "john@company.com" },
-                  { id: "subject", label: "Subject", type: "text", placeholder: "Job Opportunity / Project" },
+                  {
+                    id: "name",
+                    label: "Your Name",
+                    type: "text",
+                    placeholder: "John Doe",
+                  },
+                  {
+                    id: "email",
+                    label: "Email Address",
+                    type: "email",
+                    placeholder: "john@company.com",
+                  },
+                  {
+                    id: "subject",
+                    label: "Subject",
+                    type: "text",
+                    placeholder: "Job Opportunity / Project",
+                  },
                 ].map((f) => (
                   <div key={f.id}>
                     <label
                       htmlFor={f.id}
                       className="block text-xs mb-1.5 font-medium"
-                      style={{ color: "#9488B0", fontFamily: "Inter, sans-serif" }}
+                      style={{
+                        color: "#9488B0",
+                        fontFamily: "Inter, sans-serif",
+                      }}
                     >
                       {f.label}
                     </label>
@@ -1343,7 +2381,10 @@ function Contact() {
                   <label
                     htmlFor="msg"
                     className="block text-xs mb-1.5 font-medium"
-                    style={{ color: "#9488B0", fontFamily: "Inter, sans-serif" }}
+                    style={{
+                      color: "#9488B0",
+                      fontFamily: "Inter, sans-serif",
+                    }}
                   >
                     Message
                   </label>
@@ -1398,12 +2439,18 @@ function Footer() {
           >
             Bharti Rai
           </div>
-          <p className="text-xs" style={{ color: "#9488B0", fontFamily: "Inter, sans-serif" }}>
-            Java Backend Developer · Bhopal, India
+          <p
+            className="text-xs"
+            style={{ color: "#9488B0", fontFamily: "Inter, sans-serif" }}
+          >
+            Java Backend Developer · Kanpur, India
           </p>
         </div>
 
-        <p className="text-xs text-center" style={{ color: "#9488B0", fontFamily: "Inter, sans-serif" }}>
+        <p
+          className="text-xs text-center"
+          style={{ color: "#9488B0", fontFamily: "Inter, sans-serif" }}
+        >
           © 2024 Bharti Rai. Built with Spring of passion.
         </p>
 
@@ -1411,7 +2458,11 @@ function Footer() {
           {[
             { icon: <Github size={18} />, href: "#", label: "GitHub" },
             { icon: <Linkedin size={18} />, href: "#", label: "LinkedIn" },
-            { icon: <Mail size={18} />, href: "mailto:bharti.rai@email.com", label: "Email" },
+            {
+              icon: <Mail size={18} />,
+              href: "mailto:bhartiraivns235@email.com",
+              label: "Email",
+            },
           ].map((s) => (
             <a
               key={s.label}
@@ -1436,13 +2487,22 @@ function Footer() {
 
 export default function App() {
   const [activeSection, setActiveSection] = useState("About");
+  const [drawerService, setDrawerService] = useState<ServiceType | null>(null);
 
   const scrollTo = (id: string) => {
     document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
   };
 
   useEffect(() => {
-    const sections = ["about", "skills", "experience", "projects", "services", "education", "contact"];
+    const sections = [
+      "about",
+      "skills",
+      "experience",
+      "projects",
+      "services",
+      "education",
+      "contact",
+    ];
     const observers: IntersectionObserver[] = [];
 
     sections.forEach((id) => {
@@ -1454,7 +2514,7 @@ export default function App() {
             setActiveSection(id.charAt(0).toUpperCase() + id.slice(1));
           }
         },
-        { threshold: 0.3 }
+        { threshold: 0.3 },
       );
       obs.observe(el);
       observers.push(obs);
@@ -1474,7 +2534,12 @@ export default function App() {
       <Skills />
       <Experience />
       <Projects />
-      <Services />
+      <Services onServiceClick={setDrawerService} />
+      <ServiceDrawer
+        service={drawerService}
+        onClose={() => setDrawerService(null)}
+        scrollTo={scrollTo}
+      />
       <Education />
       <Certifications />
       <Contact />
