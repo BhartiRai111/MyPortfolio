@@ -45,7 +45,7 @@ const skills = {
   Frontend: {
     icon: <Globe size={20} />,
     color: "#34D399",
-    items: ["HTML", "CSS", "Bootstrap", "Thymeleaf"],
+    items: ["HTML", "React", "CSS", "Bootstrap", "Thymeleaf"],
   },
   Database: {
     icon: <Database size={20} />,
@@ -78,6 +78,23 @@ const projects = [
     highlight: true,
   },
   {
+    title: "Expense Tracker",
+    description:
+      "A full-featured Enterprise Resource Planning system for paper businesses. Handles inventory, billing, purchase orders, and financial reports end-to-end.",
+    image:
+      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=450&fit=crop&auto=format",
+    tech: ["Java", "Spring Boot", "MySQL", "Thymeleaf", "Bootstrap"],
+    features: [
+      "Inventory Management",
+      "Invoice Generation",
+      "Financial Reports",
+      "Role-based Access",
+    ],
+    github: "https://github.com/BhartiRai111/expenceTracker",
+    demo: "#",
+    highlight: true,
+  },
+  {
     title: "Chat Application",
     description:
       "Real-time messaging platform with WebSocket support, user authentication, group chats, and message history persistence.",
@@ -90,7 +107,7 @@ const projects = [
       "JWT Auth",
       "Message History",
     ],
-    github: "#",
+    github: "https://github.com/BhartiRai111/chating_Application",
     demo: "#",
     highlight: false,
   },
@@ -107,7 +124,7 @@ const projects = [
       "Revenue Analytics",
       "Client Portal",
     ],
-    github: "#",
+    github: "https://github.com/BhartiRai111/business-management",
     demo: "#",
     highlight: false,
   },
@@ -124,7 +141,7 @@ const projects = [
       "Fee Collection",
       "Report Cards",
     ],
-    github: "#",
+    github: "https://github.com/BhartiRai111/student-management",
     demo: "#",
     highlight: false,
   },
@@ -951,7 +968,7 @@ function Skills() {
       Hibernate: 78,
       JPA: 76,
     },
-    Frontend: { HTML: 80, CSS: 72, Bootstrap: 75, Thymeleaf: 70 },
+    Frontend: { Thymeleaf: 80, React: 80, HTML: 90, CSS: 85, Bootstrap: 75 },
     Database: { MySQL: 84, PostgreSQL: 76, MongoDB: 68 },
     Tools: { Git: 85, GitHub: 85, "IntelliJ IDEA": 90, Maven: 80, Postman: 82 },
   };
