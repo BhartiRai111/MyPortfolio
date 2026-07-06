@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { ImageWithFallback } from "@/app/components/figma/ImageWithFallback";
-import profilePhoto from "@/imports/WhatsApp_Image_2026-06-30_at_12.31.50_PM.jpeg";
+import profilePhoto from "@/imports/image2.jpeg";
 import {
   Github,
   ExternalLink,
@@ -2473,8 +2473,16 @@ function Footer() {
 
         <div className="flex items-center gap-4">
           {[
-            { icon: <Github size={18} />, href: "#", label: "GitHub" },
-            { icon: <Linkedin size={18} />, href: "#", label: "LinkedIn" },
+            {
+              icon: <Github size={18} />,
+              href: "https://github.com/BhartiRai111",
+              label: "GitHub",
+            },
+            {
+              icon: <Linkedin size={18} />,
+              href: "https://www.linkedin.com/in/er-bharti-rai-b58454227",
+              label: "LinkedIn",
+            },
             {
               icon: <Mail size={18} />,
               href: "mailto:bhartiraivns235@email.com",
