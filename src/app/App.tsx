@@ -149,7 +149,7 @@ const projects = [
 
 const downloadResume = () => {
   const link = document.createElement("a");
-  link.href = "/Bharti_Rai_Resume.pdf"; // public folder me PDF ka naam
+  link.href = "/New_ATS_Resume.pdf"; // public folder me PDF ka naam
   link.download = "Bharti_Rai_Resume.pdf";
   document.body.appendChild(link);
   link.click();
