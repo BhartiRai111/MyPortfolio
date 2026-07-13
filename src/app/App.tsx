@@ -2220,6 +2220,63 @@ function Certifications() {
 }
 
 function Contact() {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
+  });
+  const [loading, setLoading] = useState(false);
+
+  const handleChange = (e) => {
+    const { id, value } = e.target;
+
+    setFormData((prev) => ({
+      ...prev,
+      [id === "msg" ? "message" : id]: value,
+    }));
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    const { name, email, subject, message } = formData;
+
+    if (!name.trim() || !email.trim() || !subject.trim() || !message.trim()) {
+      alert("Please fill in all fields.");
+      return;
+    }
+    try {
+      setLoading(true);
+      const res = await fetch("http://localhost:5000/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await res.json();
+
+      if (data.success) {
+        alert("Message sent successfully!");
+
+        setFormData({
+          name: "",
+          email: "",
+          subject: "",
+          message: "",
+        });
+      } else {
+        alert(data.message);
+      }
+    } catch (error) {
+      console.error(error);
+      alert("Something went wrong.");
+    } finally {
+      setLoading(false);
+    }
+  };
   const contacts = [
     {
       icon: <Mail size={20} />,
@@ -2348,7 +2405,7 @@ function Contact() {
               >
                 Send a Message
               </h3>
-              <div className="space-y-4">
+              <form onSubmit={handleSubmit} className="space-y-4">
                 {[
                   {
                     id: "name",
@@ -2384,6 +2441,9 @@ function Contact() {
                       id={f.id}
                       type={f.type}
                       placeholder={f.placeholder}
+                      value={formData[f.id]}
+                      onChange={handleChange}
+                      required
                       className="w-full px-4 py-3 rounded-xl text-sm outline-none transition-all focus:ring-1"
                       style={{
                         background: "rgba(28,20,51,0.8)",
@@ -2409,6 +2469,9 @@ function Contact() {
                     id="msg"
                     rows={4}
                     placeholder="Tell me about the role or project..."
+                    value={formData.message}
+                    onChange={handleChange}
+                    required
                     className="w-full px-4 py-3 rounded-xl text-sm outline-none resize-none transition-all focus:ring-1"
                     style={{
                       background: "rgba(28,20,51,0.8)",
@@ -2419,16 +2482,18 @@ function Contact() {
                   />
                 </div>
                 <button
-                  className="w-full py-3 rounded-xl font-semibold text-sm transition-all hover:shadow-[0_0_30px_rgba(168,85,247,0.35)] hover:-translate-y-0.5"
+                  type="submit"
+                  disabled={loading}
+                  className="w-full py-3 rounded-xl font-semibold text-sm transition-all disabled:opacity-50 disabled:cursor-not-allowed"
                   style={{
                     background: "linear-gradient(135deg, #A855F7, #EC4899)",
                     color: "#0D0A1A",
                     fontFamily: "Inter, sans-serif",
                   }}
                 >
-                  Send Message
+                  {loading ? "Sending..." : "Send Message"}
                 </button>
-              </div>
+              </form>
             </GlassCard>
           </FadeIn>
         </div>
