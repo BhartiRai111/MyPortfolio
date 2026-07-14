@@ -2248,7 +2248,7 @@ function Contact() {
     }
     try {
       setLoading(true);
-      const res = await fetch("http://localhost:5000/contact", {
+      const res = await fetch("https://backend-nine-indol-10.vercel.app/contact", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -2411,13 +2411,13 @@ function Contact() {
                     id: "name",
                     label: "Your Name",
                     type: "text",
-                    placeholder: "John Doe",
+                    placeholder: "Name",
                   },
                   {
                     id: "email",
                     label: "Email Address",
                     type: "email",
-                    placeholder: "john@company.com",
+                    placeholder: "your_email@gmail.com",
                   },
                   {
                     id: "subject",
